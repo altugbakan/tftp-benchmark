@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Define the TFTP server IP address and the file transfer directory
-SERVER_IP="127.0.0.1"
+if [ -z "$SERVER_IP" ];
+  then SERVER_IP="127.0.0.1"
+fi
 
 # Define the file sizes in kilobytes
 FILE_SIZES=(200 400 600 800 1000)
